@@ -1,4 +1,55 @@
-# Airtable timeline assignment
+# Airtable Timeline Assignment
+
+## 📌 Description
+This project implements an interactive timeline for visualizing events, arranged in multiple "lanes" to avoid overlaps.  
+The size and position of each event are proportional to its start and end dates, with horizontal scrolling for navigation.
+
+Architecture used: **MVVM** with **Koin** for dependency injection.  
+UI developed with **Jetpack Compose**.
+
+---
+
+## ⏱ Time Spent
+4 hours.
+
+---
+
+## ✅ What I Liked
+I enjoyed implementing a feature in Compose using my own development strategies and patterns that I commonly adopt in real projects.
+
+---
+
+## 🔄 What I Would Do Differently
+I would dedicate a full day for this type of exercise to:
+- Deliver a more polished and professional result.
+- Create a presentation video.
+- Document each class in detail, explaining responsibilities and technical decisions.
+
+---
+
+## 🛠 How I Made My Decisions
+- Chose **MVVM** as it is the most widely used architecture in modern Android projects.
+- Used **Koin** for dependency injection due to its simplicity and flexibility.
+- Kept `pxPerDay` fixed in the MVP to ensure faster and more predictable development.
+- Managed state with `UIState and StateFlow` for clear and reactive integration with the UI.
+
+---
+
+## 🧪 How I Would Test (With More Time)
+- Create unit tests for every critical function (especially lane calculation and date-to-pixel conversion).
+- Validate visual behavior with instrumented Compose tests.
+- Test edge cases: empty list, events on the same day, long events, and multiple overlapping events.
+
+---
+
+## ▶️ How to Run the Project
+1. Download the project:
+   ```bash
+   git clone https://github.com/murilospinello/airtable-test
+
+
+
+# [OLD] Airtable timeline assignment
 
 ## Expected implementation time:
 
