@@ -3,7 +3,7 @@ package com.airtable.interview.airtableschedule.domain.model
 import java.util.Date
 
 object SampleTimelineItems {
-    private val year = 2020 - 1900
+    private val year = 2025
     var timelineItems: List<Event> = listOf(
         Event(
             1,

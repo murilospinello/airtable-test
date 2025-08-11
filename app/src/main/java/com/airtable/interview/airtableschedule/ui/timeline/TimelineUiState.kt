@@ -5,12 +5,9 @@ import com.airtable.interview.airtableschedule.domain.model.Event
 /**
  * UI state for the timeline screen.
  */
-data class TimelineUiState(
-    val events: List<Event> = emptyList(),
-)
 
-//sealed interface ChatsUiState {
-//    object Loading : ChatsUiState
-//    data class Success(val chats: List<ChatItem>) : ChatsUiState
-//    data class Error(val msg: String) : ChatsUiState
-//}
+sealed interface TimeLineUiState {
+    object Loading : TimeLineUiState
+    object Success : TimeLineUiState
+    data class Error(val msg: String) : TimeLineUiState
+}

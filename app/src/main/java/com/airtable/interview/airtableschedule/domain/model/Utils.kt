@@ -1,25 +1,16 @@
 package com.airtable.interview.airtableschedule.domain.model
 
-/**
- * Takes a list of [Event]s and assigns them to lanes based on start/end dates.
- */
-fun assignLanes(events: List<Event>): List<List<Event>> {
-    val lanes = mutableListOf<MutableList<Event>>()
+import android.annotation.SuppressLint
+import com.airtable.interview.airtableschedule.ui.theme.Strings.DATE_FORMAT
+import java.text.SimpleDateFormat
+import java.util.Date
 
-    // Go through the list of events sorted by start date
-    events.sortedBy { event -> event.startDate }
-        .forEach { event ->
-            // Attempt to assign the event to an existing lane
-            val availableLane = lanes.find { lane ->
-                lane.last().endDate < event.startDate
-            }
+fun emptyString() = ""
 
-            if (availableLane != null) {
-                availableLane.add(event)
-            } else {
-                // Create a new lane if there are currently no free lanes to assign the event
-                lanes.add(mutableListOf(event))
-            }
-        }
-    return lanes
+fun doNothing() = emptyString()
+
+@SuppressLint("SimpleDateFormat")
+fun Date.toDate(): String? {
+    val sdf = SimpleDateFormat(DATE_FORMAT)
+    return sdf.format(this)
 }
