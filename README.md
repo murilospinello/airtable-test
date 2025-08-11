@@ -24,6 +24,7 @@ I would dedicate a full day for this type of exercise to:
 - Deliver a more polished and professional result.
 - Create a presentation video.
 - Document each class in detail, explaining responsibilities and technical decisions.
+- With more time, finishing up the DatePicker flow
 
 ---
 
